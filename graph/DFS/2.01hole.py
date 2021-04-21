@@ -36,3 +36,42 @@ for i in range(n):
 
 
 print(result)
+
+
+# 0 0 1
+# 0 1 0
+# 1 0 1
+# dfs(1, 1)을 진행하고 나면
+# (True 0->1) , (True 0->1) , 1
+# (True 0->1) , 1           , 0
+# 1           , 0           , 1
+# result = 1
+
+# dfs(1, 2)
+# False
+
+# dfs(1, 3)
+# False
+
+# dfs(2, 1)
+# False
+# dfs(2, 2)
+# False
+
+# dfs(2, 3)
+# (True 0->1) , (True 0->1) , 1
+# (True 0->1) , 1           , (True 0->1)
+# 1           , 0           , 1
+# (2, 3)주변은 애초에 False
+# result + 1
+
+# dfs(3, 1)
+# False
+# dfs(3, 2)
+# (True 0->1) , (True 0->1) , 1
+# (True 0->1) , 1           , (True 0->1)
+# 1           , (True 0->1) , 1
+# result + 1
+
+# 그래서 result 가 3이 돼는것이다.
+# 방문 처리가 그래프에선 상당히 중요하다는걸 느끼게 된 문제이다.
