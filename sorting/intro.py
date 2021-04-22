@@ -94,3 +94,17 @@ print(array)
 # sorted(listname) sorted는 새로운 리스트를 반환한다(!!원본리스트에는 영향이 없다!!)
 # 그냥 원본을 바꾸면서 속도가 더 빠른것이 sort().
 # 원본을 건드리지 않으러면 sorted()
+# soerted(listname, reverse = True)
+
+# 또한 sorted(), sort()는 key 매개변수를 입력으로 받을수도 있다.
+# key값으로는 하나의 함수가 들어가야 한다. 그리고 그것이 정렬 기준이 된다.
+
+array = [("사과", 2), ("바나나", 7), ("딸기", 3)]
+
+
+def setting(data):
+    return data[1]
+
+
+result = sorted(array, key=setting)
+print(result)
