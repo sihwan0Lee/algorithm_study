@@ -1,4 +1,5 @@
 def solution(scores):
+    # 자기 점수를 가지는 행을 만들기 위해 행과 열을 뒤바꿈
     new_data = [[] for i in range(len(scores))]
     answer = []
     grade = []

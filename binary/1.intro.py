@@ -53,3 +53,5 @@ if result == None:
     print("원소가 존재 하지 않습니다")
 else:
     print(result + 1)
+
+# 탐색 범위가 큰 상황에서의 탐색을 가정하는 문제
