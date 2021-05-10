@@ -23,11 +23,15 @@ def solution(s):
     s = s[2:-2]
     s = s.split("},{")
     s = sorted(s, key=lambda x: len(x))
+    print(s)
     for i in s:
         x = i.split(',')
+        print(x)
         for j in x:
             if int(j)not in answer:
                 answer.append(int(j))
+    return answer
 
 
-print(solution("{{2},{2,1},{2,1,3},{2,1,3,4}}"))
+# print(solution("{{2},{2,1},{2,1,3},{2,1,3,4}}"))
+print(solution("{{1,2,3},{2,1},{1,2,4,3},{2}}"))
