@@ -13,7 +13,7 @@
 # 원하는 조건을 만족하는 가장 알맞은 값을 찾는 문제
 # 적절한 높이를 찾을 때까지 절단기의 높이 H를 반복해서 조정하자
 
-n, m = list(map(int, input().split(' ')))
+n, m = list(map(int, input().split()))
 
 array = list(map(int, input().split()))
 
