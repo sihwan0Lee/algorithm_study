@@ -6,18 +6,23 @@
 # computer[i][i]는 항상 1입니다.
 
 
+def dfs(computers, visited, v):
+    if visited[v] == 0:
+        visited[v] = 1
+    for e in range(len(computers)):
+        if computers[v][e] == 1 and visited[e] == 0:
+            dfs(computers, visited, e)
+
 
 def solution(n, computers):
-    count_zero = 0
-    for i in range(len(computers)):
-        if computers[i].count(0) == 2:
-            count_zero += 1
-    if count_zero == 2:
-        return 3
-    elif count_zero == 1:
-        return 2
-    elif count_zero == 0:
-        return 1
+    visited = [0] * n
+    network = 0
+    while 0 in visited:
+        for i in range(n):
+            if visited[i] == 0:
+                dfs(computers, visited, i)
+                ans += 1
+    return network
 
 
 print(solution(3, [[1, 1, 0], [1, 1, 0], [0, 0, 1]]))
