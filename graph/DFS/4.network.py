@@ -21,7 +21,7 @@ def solution(n, computers):
         for i in range(n):
             if visited[i] == 0:
                 dfs(computers, visited, i)
-                ans += 1
+                network += 1
     return network
 
 
