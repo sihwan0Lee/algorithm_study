@@ -72,6 +72,7 @@ def solution(n, a, b):
 # 풀이 3
 
 def solution3(n, a, b):
+    if (a == 1 and b == 2)
     cnt = 0
     for i in range(max(a, b) // 2 + 1):
         a = a//2 + a % 2
@@ -83,3 +84,16 @@ def solution3(n, a, b):
 
 
 print(solution3(8, 4, 7))
+
+
+# 풀이 4 (통과)
+
+def solution4(n, a, b):
+    answer = 0
+    while a != b:
+        answer += 1
+        a, b = (a+1)//2, (b+1)//2
+    return answer
+
+
+print(solution4(8, 4, 7))
