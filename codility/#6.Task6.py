@@ -55,7 +55,7 @@ def solution3(A):
 
         diff = abs(left_sum - right_sum)
         result.append(diff)
-    print(result)
+    return min(result)
 
 
 print(solution3([3, 1, 2, 4, 3]))

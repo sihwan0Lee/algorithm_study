@@ -22,7 +22,7 @@ def solution(N):
 def solution2(N):
     make_bin = bin(N)[2:]
     zero = []
-    for i in range(len(make_bin) + 2):
+    for i in range(len(make_bin)):
         count = 0
         # 1이 나타나면 다음 1이 나타날때까지 카운트를 올린다.
         if make_bin[i] == "1":

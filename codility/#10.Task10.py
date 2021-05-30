@@ -4,11 +4,21 @@
 # 목표는 A가 순열인지 확인할것.
 # 순열이 맞다면 1을 아니라면 0을 리턴시킬것.
 
-
+# 88%
 def solution(A):
-    # 이게 만약 확실히 등차가 1 짜리라면
-    # 첫행을 기준으로 +1씩하면서 확인해나가는수밖에 없을듯?
-    print(set(A))
-
+    # 이게 만약 확실히 등차가 1 짜리고, 1부터시작이니까.
+    
+    N = len(A)
+    if N == max(A):
+        return 1 
+    else:
+        return 0
+        
 
 print(solution([4, 1, 3]))
+
+def solution(A):
+    if max(A) != len(A) or len(set(A)) != len(A):
+        return 0
+    return 1
+

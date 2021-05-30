@@ -28,11 +28,11 @@ def solution(N, A):
 
 
 # 일단 아까 거슬렸던 전체 set에서 또 for 돌려버린게 문제인게 분명함
+
+# 66%
 def solution2(N, A):
     counters = [0] * (N + 1)
-    print(counters)
     for i in range(len(A)):
-        print(i, A[i])
         # A[i] , A의 밸류가 N 보다 크다면 카운터스 전체 +1, 아니면 그 요소만.
         if A[i] > N:
             counters = [max(counters)] * (N + 1)
@@ -42,3 +42,24 @@ def solution2(N, A):
 
 
 print(solution2(5, [3, 4, 4, 6, 1, 4, 4]))
+
+def solution3(N, A):
+    counters = [0] * N
+    for i in A:
+        if 1 <= i <= N:
+            counters[i - 1] += 1
+        else:
+            counters = [max(counters)] * N 
+    return counters
+
+# 결국 max때문에 시간 복잡도에 문제가 여전히 생김.
+# max를 매번 구하지 않도록 해보자
+
+def solution4(N, A):
+    counters = [0] * N
+    mx = 0
+    for i in A:
+        if 1 <= i <= N:
+            counters[i - 1] += 1
+            
+

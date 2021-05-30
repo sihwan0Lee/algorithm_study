@@ -26,7 +26,7 @@ def solution(X, A):
 #print(solution(2, [2, 2, 2, 2, 2]))
 #print(solution(5, [1, 3, 1, 4, 2, 3, 5, 4]))
 
-
+# 100%
 def solution2(X, A):
     river = [0] * X
     l = 0
@@ -42,3 +42,7 @@ def solution2(X, A):
 
 
 print(solution2(5, [1, 3, 1, 4, 2, 3, 5, 4]))
+
+
+# 소감
+# 문제이해를 100% 잘하는것이 중요하다/

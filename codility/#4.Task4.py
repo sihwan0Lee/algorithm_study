@@ -9,6 +9,9 @@
 # 두번째 점프, (10 + 30) + 30 = 70
 # 세번쨰 점프, (10 + 30 + 30) + 30 = 100
 
+
+# 33%
+
 def solution(X, Y, D):
     count = 0
     for i in range(1, Y + 1):
@@ -20,3 +23,12 @@ def solution(X, Y, D):
 
 
 print(solution(10, 85, 30))
+
+
+# 100%
+def solution(X, Y, D):
+    distance = Y - X
+    if distance % D == 0:
+        return distance // D
+    else:
+        return (distance // D) + 1
