@@ -4,7 +4,7 @@
 # 문제는 0을 어떻게 하냐인듯.
 # mod == % 나머지
 
-# 정확성 100% 퍼포먼스 50% 
+# 정확성 100% 퍼포먼스 50%
 def solution(A, B, K):
     div = 1
     count = 0
@@ -17,4 +17,30 @@ def solution(A, B, K):
     return count
 
 
-print(solution(6, 11, 2))
+#print(solution(6, 11, 2))
+
+
+# { i : A ≤ i ≤ B, i mod K = 0 }
+
+
+def solution2(A, B, K):
+    count = 0
+    for i in range(A, B + 1):
+        if i % K == 0:
+            count += 1
+    return count
+
+
+print(solution2(6, 11, 2))
+
+# 일반적으로 12/2 = 6 몫은 나눠떨어지는 수의 갯수임.
+# 그것을 이용함
+
+
+def solution(A, B, K):
+
+    a = (A-1)//K
+    b = B//K
+    c = b-a
+
+    return c
