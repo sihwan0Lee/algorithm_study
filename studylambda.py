@@ -49,14 +49,3 @@
 # 정리해보자면 익명 함수가 필요할 때, (함수 안에서라던지.) 그때 사용하면 될 것 같다.
 # lambda 변수: 변수를 이용한 식 이나 조건, 외부 리스트나 직접적 리스트를 통한 범위)
 
-
-class Person:
-    def greeting(self):
-        print('Hello')
-
-    def hello(self):
-        self.greeting()
-
-
-j = Person()
-print(j.hello())
