@@ -1,0 +1,88 @@
+1. 연산
++, -, *, /, //(몫), %(나머지)
+
+2. 리스트 선언
+a = []
+a = list()
+
+리스트 요소
+0, 1, 2, 3, 4, 5, 6
+-7, -6 -5, -4, -3, -2, -1
+리스트 슬라이싱
+[인덱스:인덱스:증가폭(생략가능)] 끝 인덱스는 포함 안됨
+끝 인덱스는 가져오려는 인덱스보다 1을 더 크게 지정함
+
+리스트 컴프리핸션
+a = [i*i for i in range(1,10) if i % 2 == 1]
+
+코딩 테스트에서 2차원 리스트를 초기화할 때 매우 효과적이다.
+N * M 크기의 2차원 리스트 초기화
+n, m = 3, 4
+array = [[0]*m for _in range(n)]
+print(array)
+
+특정 크기의 2차원 리스트를 초기화 할 때는 반드시 리스트 컴프리핸션을 이용해야한다. 그렇지 않으면 의도하지 않은 결과가 나올 수 있다.
+
+그 외 리스트를 다루는 문법
+append(), sort(), reverse(), insert(), count(), remove()
+
+튜플
+
+리스트와 거의 비슷하지만, 한 번 선언된 값을 변경할수없다.
+리스트와 달리 () 를 이용한다.
+
+딕셔너리
+
+data = dict()
+data['사과'] = 'apple'
+data['바나나'] = 'banana'
+key_list = data.keys()
+value_list = data.values()
+
+얕은 복사(shallow copy) 1
+>>> a = {'alice': [1, 2, 3], 'bob': 20, 'tony': 15, 'suzy': 30}
+>>> b =a.copy()
+>>> b['alice'].append(5)
+>>> b
+{'alice': [1, 2, 3, 5], 'bob': 20, 'tony': 15, 'suzy': 30}
+>>> a
+{'alice': [1, 2, 3, 5], 'bob': 20, 'tony': 15, 'suzy': 30}
+얕은 복사(shallow copy) 2
+>>> a = {'alice': [1, 2, 3], 'bob': 20, 'tony': 15, 'suzy': 30}
+>>> b = dict(a)
+>>> a
+{'alice': [1, 2, 3], 'bob': 20, 'tony': 15, 'suzy': 30}
+>>> b
+{'alice': [1, 2, 3], 'bob': 20, 'tony': 15, 'suzy': 30}
+>>> id(a)
+4334645680
+>>> id(b)
+4334648920
+깊은 복사(deep copy)
+>>> import copy
+>>> a = {'alice': [1, 2, 3], 'bob': 20, 'tony': 15, 'suzy': 30}
+>>> b = copy.deepcopy(a)
+>>> b['alice'].append(5)
+>>> b
+{'alice': [1, 2, 3, 5], 'bob': 20, 'tony': 15, 'suzy': 30}
+>>> a
+{'alice': [1, 2, 3], 'bob': 20, 'tony': 15, 'suzy': 30}
+
+for문을 통해 딕셔너리를 for문을 돌리면 key값이 할당됨, value도 가능함.
+순서는 임의적이다.같은 순서를 보장할 수 없다.
+>>> a = {'alice': [1, 2, 3], 'bob': 20, 'tony': 15, 'suzy': 30}
+>>> for key in a:               (a, value(), items())
+...     print(key)
+
+
+
+데이터 입출력 (파이썬 코드)
+# 입력할 데이터의 갯수를 입력
+n = int(input())
+
+# 각 데이터를 공백으로 구분하여 입력
+data = list(map(int, input().split()))
+
+n, m, k를 공백으로 구분지어 입력하기
+n, m ,k = map(int, input().split())
+print(n, m, k)
